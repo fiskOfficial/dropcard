@@ -1,0 +1,27 @@
+body {
+    background: pink;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 100vh;
+}
+
+.dropSite {
+    width: 90vw;
+    height: 90vh;
+    border: purple 5px dashed;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 80px;
+    color: white;
+    margin-bottom: 0;
+}
+
+/* input {
+    font-size: 20px;
+} */

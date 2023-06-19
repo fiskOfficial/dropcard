@@ -55,8 +55,10 @@ createCard.addEventListener("click", () => {
 
     newNote.addEventListener("dblclick", () => {
         const input = document.createElement("input");
+        if(newNote.innerHTML !== "") {
+            newNote.innerHTML = "";
+        }
 
-        
         input.style.backgroundColor = newColor;
         input.style.border = "white 1px solid";
         input.style.width = 90 + "%";

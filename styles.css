@@ -17,13 +17,22 @@ body {
 
 h1 {
     text-align: center;
-    font-size: 80px;
+    font-size: 100px;
     color: white;
     margin-bottom: 0;
+    font-family: 'Grandiflora One', serif;
+    margin-top: 20px;
 }
  
 
 
-/* input {
-    font-size: 20px;
-} */
+.btnClass {
+    margin-left: 100px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: "pointer";
+    width: 110px;
+    height: 60px;
+    border-radius: 50%;
+}

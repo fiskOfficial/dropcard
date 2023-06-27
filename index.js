@@ -9,7 +9,6 @@ createCard.style.color = "white";
 createCard.style.cursor = "pointer";
 createCard.innerHTML = "Create A Card";
 
-
 h1.parentNode.insertBefore(createCard, h1.nextSibling);
 
 createCard.addEventListener("click", () => {
@@ -26,19 +25,6 @@ createCard.addEventListener("click", () => {
   const G = Math.floor(Math.random() * 255);
   const B = Math.floor(Math.random() * 255);
   const newColor = `rgb(${R}, ${G}, ${B})`;
-
-  // createCard.addEventListener("mouseover", () => {
-  //   createCard.style.backgroundColor = "white";
-  //   createCard.style.color = newColor;
-  //   createCard.style.border = newColor + "1px solid";
-  // });
-
-  // createCard.addEventListener("mouseout", () => {
-  //   createCard.style.backgroundColor = "white";
-  //   createCard.style.color = newColor;
-  //   createCard.style.border = newColor + "1px solid";
-
-  // });
 
   createCard.style.backgroundColor = newColor;
   newNote.style.backgroundColor = newColor;
@@ -85,7 +71,6 @@ createCard.addEventListener("click", () => {
       document.onmousemove = handleMouseMove;
     }
   }
-
   // Function to handle mouse move event
   function handleMouseMove(e) {
     if (isDragging) {
@@ -95,7 +80,6 @@ createCard.addEventListener("click", () => {
       draggableDiv.style.zIndex = 1001;
     }
   }
-
   // Function to handle mouse up event
   function handleMouseUp(e) {
     if (isDragging) {
@@ -106,56 +90,18 @@ createCard.addEventListener("click", () => {
       document.onmousemove = null;
     }
   }
-
   newNote.addEventListener("keydown", (e) => {
     if (e.code === "Enter") {
       newNote.setAttribute("contenteditable", "false");
     }
   });
-
-  //   newNote.addEventListener('mousedown', dragMouseDown);
-
-  //   // JavaScript code
-  //   let draggableDiv;
-  //   let initialX, initialY;
-
-  //   // Function to handle mouse down event
-  //   function dragMouseDown(e) {
-  //     e.preventDefault();
-  //     draggableDiv = e.target;
-  //     initialX = e.clientX - draggableDiv.offsetLeft;
-  //     initialY = e.clientY - draggableDiv.offsetTop;
-  //     document.onmouseup = closeDragElement;
-  //     document.onmousemove = elementDrag;
-  //   }
-
-  //   // Function to drag the element
-  //   function elementDrag(e) {
-  //     e.preventDefault();
-
-  //     draggableDiv.style.top = (e.clientY - initialY) + "px";
-  //     draggableDiv.style.left = (e.clientX - initialX) + "px";
-  //   }
-
-  //   // Function to handle mouse up event
-  //   function closeDragElement(e) {
-  //       draggableDiv.classList.remove('upper');
-  //       document.onmouseup = null;
-  //       document.onmousemove = null;
-  //   }
-});
+}); 
 
 //     const input = document.createElement("input");
 
 //     if (newNote.innerHTML !== "") {
 //       newNote.innerHTML = "";
 //     }
-//     newNote.appendChild(input);
-//     input.style.backgroundColor = newColor;
-//     input.style.border = "white 1px solid";
-//     input.style.width = 90 + "%";
-//     input.style.position = "relative";
-//     input.style.transform = "none";
 
 //     const inputEnterEvent = input.addEventListener("keydown", (event) => {
 //       if (event.code === "Enter") {

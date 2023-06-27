@@ -52,7 +52,7 @@ createCard.addEventListener("click", () => {
     }
   });
 
-  newNote.addEventListener("mousedown", handleMouseDown);
+  document.addEventListener("mousedown", handleMouseDown);
 
   // JavaScript code
   let draggableDiv;
